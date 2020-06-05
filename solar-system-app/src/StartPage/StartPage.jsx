@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {button} from 'react-materialize';
 
 function StartPage () {
     return (

@@ -11,12 +11,12 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="container  lime lighten-5">
+        <nav className="container  lime lighten-5">
         <div className="container nav-wrapper">
-          <a href="#" className="brand-logo left">SOLAR SYSTEM</a>
+          <a href="#" className="brand-logo right">SOLAR SYSTEM</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
-           
-            <li><a href="/modaluser">SETTINGS</a></li>
+            
+            <li><a href="/spaceviz">settings</a></li>
           </ul>
         </div>
       </nav>
