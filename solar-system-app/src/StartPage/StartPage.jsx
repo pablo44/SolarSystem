@@ -17,7 +17,7 @@ class StartPage extends Component {
                                         <div className="section">
                                             <div className="section">
                                                 <div className="section">
-                                                    <Link to="/earth"><img src={require('../images/LogoAppSolarSystem2V.png')} alt="circle" /></Link>
+                                                    <Link to="/testspace"><img src={require('../images/LogoAppSolarSystem2V.png')} alt="circle" /></Link>
 
                                                     {/* <Button className="btn waves-effect waves-light black" type="submit" name="action"  >Go!
                                                         <i className="material-icons center"></i> */}

@@ -154,7 +154,7 @@ class TestSpace extends Component {
 
     const moonMaterial = new THREE.MeshPhongMaterial({ color: 0x888888, emissive: 0x222222 });
     const moonMesh = new THREE.Mesh(sphereGeometry, moonMaterial);
-    moonMesh.scale.set(.5, .5, .5);
+    moonMesh.scale.set(.25, .25, .25);
     moonOrbit.add(moonMesh);
     objects.push(moonMesh);
 
