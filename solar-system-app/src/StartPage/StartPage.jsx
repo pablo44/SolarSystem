@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import {  Row, Col } from 'react-materialize';
 
 
+
+
 class StartPage extends Component {
+    
+    
     render (){
         return (
         <Row className="opacity grey darken-4">
