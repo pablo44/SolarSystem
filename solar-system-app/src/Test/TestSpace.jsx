@@ -262,7 +262,7 @@ class TestSpace extends Component {
     };
 
     window.addEventListener("resize", onWindowResize, false);
-    
+
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -273,13 +273,13 @@ class TestSpace extends Component {
 
   render() {
     return (
-
-      <div className="offset-m3"
+      
+         <div className="offset-m3"
         // style={"body { margin: 0; }, canvas { display: block; }"}
 
-
-
         ref={ref => (this.mount = ref)} />
+      
+     
 
 
     )

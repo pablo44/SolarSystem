@@ -136,12 +136,16 @@ class Uranus extends Component {
     }
     render() {
         return (
-                
+            <div className= 'annotation'>
+            <p><strong>Uranus</strong></p>
+        <p>In solar system is placed att 4th place from the Sun<br/>
+         has dimention<br/>
+          it's distans from the Sun is</p>
                 <div className="offset-m3"
                			
 		            ref={ref => (this.mount = ref)} />
             
-            
+            </div>
         )
     }
 }
