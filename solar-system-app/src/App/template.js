@@ -10,6 +10,9 @@ import Jupiter from '../Jupiter/Jupiter';
 import Neptune from '../Neptune/Neptune';
 import Saturn from '../Saturn/Saturn';
 import Venus from '../Venus/Venus';
+import Mars from '../Mars/Mars';
+import Mercury from '../Mercury/Mercury';
+import Uranus from '../Uranus/Uranus';
 
 function Template () {
     return (
@@ -25,6 +28,9 @@ function Template () {
                         <Route path="/saturn" component={Saturn} />
                         <Route path="/venus" component={Venus} />
                         <Route path="/earth" component={Earth} />
+                        <Route path="/mars" component={Mars} />
+                        <Route path="/mercury" component={Mercury} />
+                        <Route path="/uranus" component={Uranus} />
                         <Route path="/settings" component={Settings} />
                         <Route path="/testspace" component={TestSpace} />
                         <Route path="/sun" component={Sun} />

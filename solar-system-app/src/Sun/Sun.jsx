@@ -23,7 +23,7 @@ class Sun extends Component {
         // use ref as a mount point of the Three.js scene instead of the document.body
         
         // let geometry = new THREE.BoxGeometry(1, 1, 1);
-        let geometry = new THREE.SphereGeometry(5, 40, 40);
+        let geometry = new THREE.SphereGeometry(6, 40, 40);
         // let material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });
         let material = new THREE.MeshBasicMaterial();
         material.map = THREE.ImageUtils.loadTexture(texture);

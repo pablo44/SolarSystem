@@ -28,12 +28,15 @@ class Navbar extends Component {
             <li><a href="/neptune">Neptune</a></li>
             <li><a href="/saturn">Saturn</a></li>
             <li><a href="/venus">Venus</a></li>
+            <li><a href="/mercury">Mercury</a></li>
+            <li><a href="/mars">Mars</a></li>
+            <li><a href="/uranus">Uranus</a></li>
           </ul>
           <a href="/" className="brand-logo left">SOLAR SYSTEM</a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><a href="/settings"><i className="material-icons">view_module</i></a></li>
             <li><a href="/"><i className="material-icons">refresh</i></a></li>
-            <li><a className="dropdown-trigger" href="#dropdown1" data-target="dropdown1">Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
+            <li><a className="dropdown-trigger" href="#dropdown1" data-target="dropdown1">Planets<i className="material-icons right">arrow_drop_down</i></a></li>
           </ul>
         </div>
 

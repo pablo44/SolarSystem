@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Container} from 'react';
 import * as THREE from 'three';
 import ReactDOM, { domElement } from "react-dom";
 import {Canvas} from 'react-three-fiber';
@@ -7,12 +8,16 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 // import { BlendFunction } from '../../node-modules/three/examples/jsm/postprocessing/BlendFunction.js';
 // import { KernelSize } from '../../node_modules/three/examples/jsm/postprocessing/KernelSize.js';
 import texture from '../images/neptune.jpg';
-
+import M from 'materialize-css';
 
 // import 'three/examples/js/loaders/BinaryLoader';
 
 class Neptune extends Component {
     componentDidMount() {
+       
+            // let elems = document.getElementById('drugi');
+            // M.Dropdown.init(elems, { inDuration: 300, outDuration: 225 });
+         
         let cloudParticles = [];
         
         let scene = new THREE.Scene();
@@ -136,10 +141,22 @@ class Neptune extends Component {
     }
     render() {
         return (
-                
+            // <div><a className='dropdown-trigger1 btn' id='drugi' href='#' data-target='dropdown1'>NEPTUNE</a>
+
+            
+            // <ul id='dropdown1' className='dropdown-content'>
+            //   <li><a href="#!">one</a></li>
+            //   <li><a href="#!">two</a></li>
+            //   <li className="divider" tabindex="-1"></li>
+            //   <li><a href="#!">three</a></li>
+            //   <li><a href="#!"><i className="material-icons">view_module</i>four</a></li>
+            //   <li><a href="#!"><i className="material-icons">cloud</i>five</a></li>
+            // </ul>
                 <div className="offset-m3"
                			
 		            ref={ref => (this.mount = ref)} />
+                    // </div>
+            
             
             
         )
