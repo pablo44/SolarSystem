@@ -4,7 +4,22 @@
     margin: 0;
     padding: 0;
 }
+.opacity {
+    background: #fff;
+    
+    opacity: .9 ;
+   
+  }
 
 .background {
-    background-color:#f9fbe7 ;
+    background-color:#0d0e04 ;
+}
+.gangR {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color: red($color: #a72525);
 }

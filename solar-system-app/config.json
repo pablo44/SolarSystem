@@ -6,7 +6,7 @@
         "arguments":{
           "watchFolder": "./sass",
           "file": "./sass/style.scss",
-          "outFile": "./www/css/style.css",
+          "outFile": "./src/www/css/style.css",
           "outputStyle": "compressed"
         }
       }

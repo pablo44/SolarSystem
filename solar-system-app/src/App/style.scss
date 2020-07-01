@@ -1,0 +1,20 @@
+.App, .body{
+    display: flex;
+    flex-direction: column;
+    background-color:#16120b ;
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        flex-shrink: 0;
+    }
+}
+html, body, #root, .App {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}

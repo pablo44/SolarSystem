@@ -1,4 +1,4 @@
-.App, .body{
+.App-body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -7,10 +7,16 @@
         flex: 1 ;
     }
     .background {
-        background-color:#fff3e0 ;
+        background-color:#5e4319 ;
     }
 
-    
+    canvas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
 }
 html, body, #root, .App {
     height: 100%;
@@ -18,4 +24,8 @@ html, body, #root, .App {
 
 body {
     margin: 0;
+}
+
+p {
+    color: red($color: #a72525);
 }

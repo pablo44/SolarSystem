@@ -1,3 +1,26 @@
-@import "../node_modules/materialize-css/sass/materialize";
-@import 'navbar';
-@import 'base.scss';
+@import "../node_modules/materialize-css/sass/materialize.scss";
+@import '_navbar';
+@import '_base';
+@import '_App';
+@import '_settings';
+
+.blue-grey {
+    background-color: rgb(214, 231, 214);
+    color: rgb(175, 230, 87);
+    font-size: 20px;
+  }
+  .hue1 {
+    color: blue($color: #000000);
+  }
+  .doda {
+    color: rgb(50, 32, 61);
+  }
+  main {
+    background-color: red($color: #000000);
+  }
+  .background {
+    background-color:#0d0e04 ;
+}
+p {
+  color: red($color: #a72525);
+}
