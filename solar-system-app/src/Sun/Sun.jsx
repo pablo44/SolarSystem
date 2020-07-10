@@ -20,8 +20,7 @@ class Sun extends Component {
         let renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth  , window.innerHeight );
         // document.body.appendChild( renderer.domElement );
-        // use ref as a mount point of the Three.js scene instead of the document.body
-        
+                
         // let geometry = new THREE.BoxGeometry(1, 1, 1);
         let geometry = new THREE.SphereGeometry(6, 40, 40);
         // let material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });

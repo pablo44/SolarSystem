@@ -77,7 +77,7 @@ class TestSpace extends Component {
       );
       starGeo.vertices.push(starDrop);
     }
-    //final object out of starngeo and starmaterial
+    //final object out of stargeo and starmaterial
     let starMaterial = new THREE.PointsMaterial({
       color: 0xDD1818,
       size: 0.05,
@@ -97,7 +97,7 @@ class TestSpace extends Component {
     let redLight = new THREE.PointLight(0xd8547e, 50, 450, 1.7);
     redLight.position.set(100, 300, 100);
     scene.add(redLight);
-
+    //scene settings
     const fov = 40;
     const aspect = 2;  // the canvas default
     const near = 0.1;
@@ -108,7 +108,7 @@ class TestSpace extends Component {
     camera.lookAt(0, 0, 0);
 
 
-
+    //basic pointlight,
     {
       const color = 0xFFFFFF;
       const intensity = 1;
@@ -117,13 +117,13 @@ class TestSpace extends Component {
     }
 
     const objects = [];
-
+    //the pattern for all shere/planets in the scene
     const radius = 1;
     const widthSegments = 40;
     const heightSegments = 40;
     const sphereGeometry = new THREE.SphereBufferGeometry(
       radius, widthSegments, heightSegments);
-
+    //empty node as parent of all planet meshes
     const solarSystem = new THREE.Object3D();
     scene.add(solarSystem);
     objects.push(solarSystem);
@@ -135,8 +135,8 @@ class TestSpace extends Component {
     sunMesh.rotation.y = 0;
     solarSystem.add(sunMesh);
     objects.push(sunMesh);
-    
 
+    //empty node as parent only for Erth and it's Moon
     const earthOrbit = new THREE.Object3D();
     earthOrbit.position.x = 30;
     solarSystem.add(earthOrbit);
@@ -147,7 +147,7 @@ class TestSpace extends Component {
     const earthMesh = new THREE.Mesh(sphereGeometry, earthMaterial);
     earthOrbit.add(earthMesh);
     objects.push(earthMesh);
-
+    //not as much necessary node but...
     const moonOrbit = new THREE.Object3D();
     moonOrbit.position.x = 2;
     earthOrbit.add(moonOrbit);
@@ -158,13 +158,7 @@ class TestSpace extends Component {
     moonOrbit.add(moonMesh);
     objects.push(moonMesh);
 
-    // add an AxesHelper to each node
-    // objects.forEach((node) => {
-    //   const axes = new THREE.AxesHelper();
-    //   axes.material.depthTest = false;
-    //   axes.renderOrder = 1;
-    //   node.add(axes);
-    // });
+
     //START of test orbitControls
     window.addEventListener('resize', function () {
       let innerWidth, innerHeight;
@@ -180,15 +174,9 @@ class TestSpace extends Component {
     });
 
     let controls = new OrbitControls(camera, renderer.domElement);
-
-    //   const sunMaterial = new THREE.MeshPhongMaterial({emissive: 0xFFFF00});
-    // const sunMesh = new THREE.Mesh(sphereGeometry, sunMaterial);
-    // sunMesh.scale.set(5, 5, 5);
-    // solarSystem.add(sunMesh);
-    // objects.push(sunMesh);
-
     let mouse = new THREE.Vector2();
     let raycaster = new THREE.Raycaster();
+
     let map = new THREE.TextureLoader().load("https://threejs.org/examples/textures/sprites/snowflake4.png");
     let spriteMat = new THREE.SpriteMaterial({
       map: map,
@@ -252,11 +240,7 @@ class TestSpace extends Component {
       cloudParticles.forEach(p => {
         p.rotation.z -= 0.001;
       });
-      // let composer = new EffectComposer( renderer )
-      // composer.animate(0.1);
-      // requestAnimationFrame(animate);
-      // sphere.rotation.x += 0.01;
-      // sphere.rotation.y += 0.01;
+
 
       renderer.render(scene, camera);
     };
@@ -273,17 +257,14 @@ class TestSpace extends Component {
 
   render() {
     return (
-      
-         <div className="offset-m3"
+
+      <div className="offset-m3"
         // style={"body { margin: 0; }, canvas { display: block; }"}
 
         ref={ref => (this.mount = ref)} />
-      
-     
 
-
-    )
-  }
+    )  
+   }                         
 
 }
 

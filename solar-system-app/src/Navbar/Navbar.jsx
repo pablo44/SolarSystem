@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Column } from 'react-materialize';
 import M from 'materialize-css';
-
+//M is used to initate dropdown menue
 class Navbar extends Component {
 
 
   componentDidMount() {
+    //to initate dropdown menue
     let elems = document.querySelectorAll('.dropdown-trigger');
     M.Dropdown.init(elems, { inDuration: 300, outDuration: 225 });
 

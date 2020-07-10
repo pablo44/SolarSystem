@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import ReactDOM, { domElement } from "react-dom";
-// import {Canvas} from 'react-three-fiber';
+import {Canvas} from 'react-three-fiber';
 import {TextureEffect, BloomEffect, EffectPass, RenderPass} from "postprocessing";
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 // import { BlendFunction } from '../../node-modules/three/examples/jsm/postprocessing/BlendFunction.js';
@@ -140,69 +140,7 @@ class Mercury extends Component {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     }
-
-    const vector = new THREE.Vector3(250, 250, 250);
-const canvas = renderer.domElement; // `renderer` is a THREE.WebGLRenderer
-
-vector.project(camera); // `camera` is a THREE.PerspectiveCamera
-
-vector.x = Math.round((0.5 + vector.x / 2) * (canvas.width / window.devicePixelRatio));
-vector.y = Math.round((0.5 - vector.y / 2) * (canvas.height / window.devicePixelRatio));
-
-const annotation = document.querySelector('.annotation');
-annotation.style.top = `${vector.y}px`;
-annotation.style.left = `${vector.x}px`;
-
- canvas = document.getElementById('number');
-const ctx = canvas.getContext('2d');
-const x = 32;
-const y = 32;
-const radius = 30;
-const startAngle = 0;
-const endAngle = Math.PI * 2;
-
-ctx.fillStyle = 'rgb(0, 0, 0)';
-ctx.beginPath();
-ctx.arc(x, y, radius, startAngle, endAngle);
-ctx.fill();
-
-ctx.strokeStyle = 'rgb(255, 255, 255)';
-ctx.lineWidth = 3;
-ctx.beginPath();
-ctx.arc(x, y, radius, startAngle, endAngle);
-ctx.stroke();
-
-ctx.fillStyle = 'rgb(255, 255, 255)';
-ctx.font = '32px sans-serif';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
-ctx.fillText('1', x, y);
-
-const numberTexture = new THREE.CanvasTexture(
-    document.querySelector('#number')
-);
-
-const spriteMaterial = new THREE.SpriteMaterial({
-    map: numberTexture,
-    alphaTest: 0.5,
-    transparent: true,
-    depthTest: false,
-    depthWrite: false
-});
-
-let sprite = new THREE.Sprite(spriteMaterial);
-sprite.position.set(250, 250, 250);
-sprite.scale.set(35, 35, 1);
-
-scene.add(sprite);
-
-const meshDistance = camera.position.distanceTo(sphere.position);
-const spriteDistance = camera.position.distanceTo(sprite.position);
- let spriteBehindObject = spriteDistance > meshDistance;
-
-sprite.material.opacity = spriteBehindObject ? 0.25 : 1;
-annotation.style.opacity = spriteBehindObject ? 0.25 : 1;
-
+    
         animate(0.1);
     }
     render() {

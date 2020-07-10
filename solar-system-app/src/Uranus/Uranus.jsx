@@ -20,9 +20,8 @@ class Uranus extends Component {
         let renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth  , window.innerHeight );
         // document.body.appendChild( renderer.domElement );
-        // use ref as a mount point of the Three.js scene instead of the document.body
+                
         
-        // let geometry = new THREE.BoxGeometry(1, 1, 1);
         let geometry = new THREE.SphereGeometry(3.5, 30.8, 30.8);
         // let material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });
         let material = new THREE.MeshBasicMaterial();
@@ -92,7 +91,7 @@ class Uranus extends Component {
         );
         starGeo.vertices.push(starDrop);
         }
-        //final object out of starngeo and rainmaerial
+        //final object out of stargeo and rainmaerial
         let starMaterial = new THREE.PointsMaterial({
             color: 0xDD1818,
             size: 0.05,

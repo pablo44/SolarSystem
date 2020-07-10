@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container} from 'react';
+// import {Container} from 'react';
 import * as THREE from 'three';
 import ReactDOM, { domElement } from "react-dom";
 import {Canvas} from 'react-three-fiber';
@@ -8,8 +8,8 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 // import { BlendFunction } from '../../node-modules/three/examples/jsm/postprocessing/BlendFunction.js';
 // import { KernelSize } from '../../node_modules/three/examples/jsm/postprocessing/KernelSize.js';
 import texture from '../images/neptune.jpg';
-import M from 'materialize-css';
-
+// import M from 'materialize-css';
+//M is used in navbar to dropdownmenue
 // import 'three/examples/js/loaders/BinaryLoader';
 
 class Neptune extends Component {
@@ -25,8 +25,7 @@ class Neptune extends Component {
         let renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth  , window.innerHeight );
         // document.body.appendChild( renderer.domElement );
-        // use ref as a mount point of the Three.js scene instead of the document.body
-        
+                
         // let geometry = new THREE.BoxGeometry(1, 1, 1);
         let geometry = new THREE.SphereGeometry(3.5, 30.8, 30.8);
         // let material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });
@@ -139,6 +138,7 @@ class Neptune extends Component {
         };
         animate(0.1);
     }
+    //render with attempt to create a button with planet name and dropdown menue with inromation
     render() {
         return (
             // <div><a className='dropdown-trigger1 btn' id='drugi' href='#' data-target='dropdown1'>NEPTUNE</a>
