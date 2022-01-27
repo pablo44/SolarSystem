@@ -45,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "three": "^0.117.1"
+    "three": "^0.137.0"
   }
 }
